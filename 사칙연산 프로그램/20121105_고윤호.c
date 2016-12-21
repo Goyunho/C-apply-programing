@@ -33,7 +33,7 @@
 #define FALSE   0                                                 /* 거짓에 사용                       */
 
 /* Macro for system control      */
-#define TEST    FALSE                                             /* 테스트를 위해 작동여부 결정 (F,T) */
+#define TEST    TRUE                                             /* 테스트를 위해 작동여부 결정 (F,T) */
 
 /* Function prototype            */
 /*  - for calculator             */
@@ -53,7 +53,7 @@ void main(){
     /****************/
     /* 변수 선언    */
     /****************/
-    int num1, num2                                         /* num1, num2는 계산에 사용되는 피연산자    */
+    int num1, num2;                                        /* num1, num2는 계산에 사용되는 피연산자    */
     int result;                                            /* 계산이 완료된 후 결과값 저장             */
     char mark;                                             /* 계산에 사용되는 연산자                   */
 
@@ -147,6 +147,6 @@ void print_func(void)                                   /* TEST 관련 함수 깊이와
 #if TEST                                                                    /* Comment 1 Start         */
     function_depth++;                                                       /* 함수 깊이 증가          */
     printf("%d> [current function : %s]\n", function_depth, __func__); /* 함수 깊이와 현재 함수 출력   */
-    fucntion_depth--;                                                       /* 함수 깊이 감소          */
+    function_depth--;                                                       /* 함수 깊이 감소          */
 #endif                                                                      /* Comment 1 End           */
 } /* print_func() end */
